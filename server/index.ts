@@ -2,12 +2,18 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import * as routes from './routes'; // Ensure routes.ts exports an express.Router
+import { registerRoutes } from './routes'; // ✅ Use named import
+
+const app = express();
+
+(async () => {
+  await registerRoutes(app); // ✅ Correctly call the async route setup
+})();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app = express();
+
 const PORT = process.env.PORT || 3000;
 
 // Serve static files from Vite build output
