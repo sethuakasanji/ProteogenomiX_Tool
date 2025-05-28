@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // Mount backend API routes
-app.use('/api', routes);
+
 
 // Fallback to frontend index.html for SPA routing
 app.get('*', (req, res) => {
