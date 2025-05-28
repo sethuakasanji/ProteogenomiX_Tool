@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { setupAuth, isAuthenticated } from "./replitAuth";
+import { setupAuth, isAuthenticated } from "./supabaseAuth";
 import { insertDatasetSchema, insertAnalysisSchema } from "@shared/schema";
 import { BiomarkerEngine } from "./biomarker-engine";
 import { createPaypalOrder, capturePaypalOrder, loadPaypalDefault } from "./paypal";
