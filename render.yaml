@@ -4,9 +4,10 @@ services:
     env: node
     plan: free
     buildCommand: |
-      cd client && npm install && npm run build
-      cd ../server && npm install
-    startCommand: node index.js
+  cd client && npm install && npm run build && cd ..
+  cd server && npm install && \
+  esbuild index.ts --platform=node --packages=external --bundle --format=cjs --outfile=../dist/server.js && cd ..
+    startCommand: node dist/server.js
     envVars:
       - key: SUPABASE_URL
         value: your-supabase-url
