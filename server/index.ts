@@ -7,7 +7,8 @@ import { fileURLToPath } from 'url';
 
 import { registerRoutes } from './routes'; // ✅ Use named import
 
-const app = express();
+const app2 = express();
+withSupabaseAuth(app2);
 
 (async () => {
   await registerRoutes(app); // ✅ Correctly call the async route setup
