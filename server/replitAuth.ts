@@ -10,7 +10,7 @@ import { storage } from "./storage";
 
 // if (!process.env.REPLIT_DOMAINS) {
 // throw new Error("Environment variable REPLIT_DOMAINS not provided"); 
-} //
+// } 
 
 const getOidcConfig = memoize(
   async () => {
