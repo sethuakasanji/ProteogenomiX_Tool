@@ -13,6 +13,8 @@ const app = express();
   await registerRoutes(app); // ✅ Correctly call the async route setup
 })();
 
+export default app;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
