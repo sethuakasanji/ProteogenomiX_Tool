@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import routes from './routes'; // Ensure routes.ts exports an express.Router
+import * as routes from './routes'; // Ensure routes.ts exports an express.Router
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
