@@ -1,5 +1,8 @@
 import express from 'express';
 import path from 'path';
+import { withSupabaseAuth } from './supabaseAuth';
+
+withSupabaseAuth(app); // ✅ This adds Supabase Auth middleware
 import { fileURLToPath } from 'url';
 
 import { registerRoutes } from './routes'; // ✅ Use named import
