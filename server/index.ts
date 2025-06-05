@@ -13,7 +13,7 @@ withSupabaseAuth(app); // ✅ apply Supabase auth
 })();
 
 const __filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
+const __dirname = path.dirname(__filename);
 
 const PORT = process.env.PORT || 3000;
 
